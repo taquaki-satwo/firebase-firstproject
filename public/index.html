@@ -54,7 +54,7 @@
 
     function writeUserName(e) {
       var name = document.getElementById('name').value;
-      if (name === '') return false;
+      if (!name) return;
       db.ref('/user/').set({
         username: name
       });
